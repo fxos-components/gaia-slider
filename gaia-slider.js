@@ -86,9 +86,8 @@ input::-moz-range-thumb {
  */
 
 input::-moz-range-thumb:active {
-  box-shadow: 0 0 0 3px var(--highlight-color, #000); /* does't look good! */
-  border: 1px solid var(--highlight-color, #000);
-  transition: none;
+  box-shadow: 0 0 0 16px rgba(0, 202, 242, 0.2);
+  transform: scale(1.1);
 }
 
 </style>
