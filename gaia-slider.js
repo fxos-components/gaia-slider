@@ -57,6 +57,7 @@ var template = `
 
 .-host {
   display: block;
+  margin: var(--base-m, 18px);
 }
 
 /** Head
