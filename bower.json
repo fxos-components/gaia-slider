@@ -1,6 +1,6 @@
 {
   "name": "gaia-slider",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/gaia-components/gaia-slider",
   "authors": [
     "Wilson Page <wilsonpage@me.com>"
@@ -17,6 +17,11 @@
     "README.md"
   ],
   "dependencies": {
-    "gaia-component": "gaia-components/gaia-component#~0.2.0"
+    "gaia-component": "gaia-components/gaia-component"
+  },
+  "devDependencies": {
+    "base": "gaia-components/base",
+    "gaia-fonts": "gaia-components/gaia-fonts",
+    "gaia-theme": "gaia-components/gaia-theme"
   }
 }
