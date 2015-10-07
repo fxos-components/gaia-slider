@@ -21,7 +21,6 @@ module.exports = component.register('gaia-slider', {
     this.els.input.addEventListener('input', this.onChange.bind(this));
 
     this.updateOutput();
-    this.shadowStyleHack();
   },
 
   onChange: function(e) {
