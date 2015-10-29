@@ -18,18 +18,29 @@ module.exports = component.register('gaia-slider', {
       output: this.querySelector('output')
     };
 
-    this.els.input.addEventListener('input', this.onChange.bind(this));
+    this.els.input.addEventListener('input', this.onInput.bind(this));
+    this.els.input.addEventListener('change', this.onChange.bind(this));
+    this.updateValue();
+  },
 
-    this.updateOutput();
+  onInput: function(e) {
+    this.updateValue();
+    this.dispatchEvent(new CustomEvent('input'));
   },
 
   onChange: function(e) {
+    this.updateValue();
+    this.dispatchEvent(new CustomEvent('change'));
+  },
+
+  updateValue: function() {
+    this.value = this.els.input.value;
     this.updateOutput();
   },
 
   updateOutput: function() {
     if (!this.els.output) { return; }
-    this.els.output.textContent = this.els.input.value;
+    this.els.output.textContent = this.value;
   },
 
   template: `
